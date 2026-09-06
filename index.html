@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EITL &mdash; Audio Demo</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; margin: 0;
+         color: #1c1c1c; background: #fbfaf8; }
+  header { background: #23324d; color: #f2f2ee; padding: 28px 24px; }
+  header h1 { font-size: 1.25rem; margin: 0 0 6px; font-weight: 600; }
+  header p { margin: 2px 0; font-size: .9rem; color: #c9cfdd; }
+  main { max-width: 1500px; margin: 0 auto; padding: 18px 24px 60px; }
+  h2 { font-size: 1.05rem; margin: 34px 0 4px; }
+  p.note { font-size: .85rem; color: #555; margin: 4px 0 12px; }
+  .tablewrap { overflow-x: auto; border: 1px solid #ddd;
+               background: #fff; }
+  table { border-collapse: collapse; font-size: .8rem; }
+  th, td { border: 1px solid #e4e2dd; padding: 4px 6px;
+            text-align: center; white-space: nowrap; }
+  thead th { background: #eef0f4; position: sticky; top: 0; }
+  tbody th { text-align: left; background: #f6f5f2; font-weight: 600;
+              position: sticky; left: 0; }
+  audio { width: 200px; height: 30px; }
+  footer { font-size: .78rem; color: #666; margin-top: 40px;
+            border-top: 1px solid #ddd; padding-top: 10px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>EITL: Ear-in-the-Loop Mixing Optimisation with Music-Generation Quality Models and Reward-Hacking Mitigation</h1>
+  <p>Anonymous ICASSP 2027 submission</p>
+  <p>Audio demo: 12-second excerpts, loudness-matched within each row.</p>
+</header>
+<main>
+
+<h2>Experiment 1 &mdash; System comparison (22 songs &times; 8 systems)</h2>
+<p class="note">Each row is one song. All clips in a row share the same
+excerpt window and are loudness-matched, so differences you hear are
+balance and processing, not level. EITL-min is the proposed
+min-agreement system.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Song</th>
+<th>Unbalanced start</th>
+<th>FxNorm</th>
+<th>MEGAMI</th>
+<th>PQ-only</th>
+<th>SB-only</th>
+<th>EITL-mean</th>
+<th>EITL-min (proposed)</th>
+<th>Professional mix</th>
+</tr></thead><tbody>
+<tr><th>Al James - Schoolboy Facination</th>
+<td><audio controls preload="none"><source src="audio/exp1__Al_James_Schoolboy_Facination__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Al_James_Schoolboy_Facination__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Al_James_Schoolboy_Facination__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Al_James_Schoolboy_Facination__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Al_James_Schoolboy_Facination__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Al_James_Schoolboy_Facination__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Al_James_Schoolboy_Facination__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Al_James_Schoolboy_Facination__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Al_James_Schoolboy_Facination__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Al_James_Schoolboy_Facination__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Al_James_Schoolboy_Facination__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Al_James_Schoolboy_Facination__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Al_James_Schoolboy_Facination__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Al_James_Schoolboy_Facination__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Al_James_Schoolboy_Facination__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Al_James_Schoolboy_Facination__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>AM Contra - Heart Peripheral</th>
+<td><audio controls preload="none"><source src="audio/exp1__AM_Contra_Heart_Peripheral__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__AM_Contra_Heart_Peripheral__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__AM_Contra_Heart_Peripheral__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__AM_Contra_Heart_Peripheral__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__AM_Contra_Heart_Peripheral__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__AM_Contra_Heart_Peripheral__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__AM_Contra_Heart_Peripheral__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__AM_Contra_Heart_Peripheral__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__AM_Contra_Heart_Peripheral__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__AM_Contra_Heart_Peripheral__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__AM_Contra_Heart_Peripheral__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__AM_Contra_Heart_Peripheral__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__AM_Contra_Heart_Peripheral__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__AM_Contra_Heart_Peripheral__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__AM_Contra_Heart_Peripheral__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__AM_Contra_Heart_Peripheral__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Arise - Run Run Run</th>
+<td><audio controls preload="none"><source src="audio/exp1__Arise_Run_Run_Run__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Arise_Run_Run_Run__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Arise_Run_Run_Run__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Arise_Run_Run_Run__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Arise_Run_Run_Run__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Arise_Run_Run_Run__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Arise_Run_Run_Run__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Arise_Run_Run_Run__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Arise_Run_Run_Run__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Arise_Run_Run_Run__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Arise_Run_Run_Run__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Arise_Run_Run_Run__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Arise_Run_Run_Run__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Arise_Run_Run_Run__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Arise_Run_Run_Run__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Arise_Run_Run_Run__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Ben Carrigan - We&#x27;ll Talk About It All Tonight</th>
+<td><audio controls preload="none"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Bobby Nobody - Stitch Up</th>
+<td><audio controls preload="none"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Bobby_Nobody_Stitch_Up__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Buitraker - Revo X</th>
+<td><audio controls preload="none"><source src="audio/exp1__Buitraker_Revo_X__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Buitraker_Revo_X__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Buitraker_Revo_X__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Buitraker_Revo_X__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Buitraker_Revo_X__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Buitraker_Revo_X__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Buitraker_Revo_X__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Buitraker_Revo_X__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Buitraker_Revo_X__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Buitraker_Revo_X__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Buitraker_Revo_X__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Buitraker_Revo_X__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Buitraker_Revo_X__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Buitraker_Revo_X__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Buitraker_Revo_X__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Buitraker_Revo_X__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Carlos Gonzalez - A Place For Us</th>
+<td><audio controls preload="none"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Carlos_Gonzalez_A_Place_For_Us__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Cristina Vane - So Easy</th>
+<td><audio controls preload="none"><source src="audio/exp1__Cristina_Vane_So_Easy__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Cristina_Vane_So_Easy__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Cristina_Vane_So_Easy__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Cristina_Vane_So_Easy__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Cristina_Vane_So_Easy__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Cristina_Vane_So_Easy__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Cristina_Vane_So_Easy__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Cristina_Vane_So_Easy__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Cristina_Vane_So_Easy__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Cristina_Vane_So_Easy__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Cristina_Vane_So_Easy__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Cristina_Vane_So_Easy__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Cristina_Vane_So_Easy__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Cristina_Vane_So_Easy__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Cristina_Vane_So_Easy__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Cristina_Vane_So_Easy__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Enda Reilly - Cur An Long Ag Seol</th>
+<td><audio controls preload="none"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Enda_Reilly_Cur_An_Long_Ag_Seol__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Forkupines - Semantics</th>
+<td><audio controls preload="none"><source src="audio/exp1__Forkupines_Semantics__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Forkupines_Semantics__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Forkupines_Semantics__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Forkupines_Semantics__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Forkupines_Semantics__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Forkupines_Semantics__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Forkupines_Semantics__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Forkupines_Semantics__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Forkupines_Semantics__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Forkupines_Semantics__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Forkupines_Semantics__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Forkupines_Semantics__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Forkupines_Semantics__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Forkupines_Semantics__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Forkupines_Semantics__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Forkupines_Semantics__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Hollow Ground - Ill Fate</th>
+<td><audio controls preload="none"><source src="audio/exp1__Hollow_Ground_Ill_Fate__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Hollow_Ground_Ill_Fate__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Hollow_Ground_Ill_Fate__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Hollow_Ground_Ill_Fate__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Hollow_Ground_Ill_Fate__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Hollow_Ground_Ill_Fate__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Hollow_Ground_Ill_Fate__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Hollow_Ground_Ill_Fate__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Hollow_Ground_Ill_Fate__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Hollow_Ground_Ill_Fate__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Hollow_Ground_Ill_Fate__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Hollow_Ground_Ill_Fate__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Hollow_Ground_Ill_Fate__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Hollow_Ground_Ill_Fate__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Hollow_Ground_Ill_Fate__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Hollow_Ground_Ill_Fate__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Little Chicago&#x27;s Finest - My Own</th>
+<td><audio controls preload="none"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Little_Chicago_s_Finest_My_Own__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Lyndsey Ollard - Catching Up</th>
+<td><audio controls preload="none"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Lyndsey_Ollard_Catching_Up__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Moosmusic - Big Dummy Shake</th>
+<td><audio controls preload="none"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Moosmusic_Big_Dummy_Shake__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Motor Tapes - Shore</th>
+<td><audio controls preload="none"><source src="audio/exp1__Motor_Tapes_Shore__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Motor_Tapes_Shore__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Motor_Tapes_Shore__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Motor_Tapes_Shore__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Motor_Tapes_Shore__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Motor_Tapes_Shore__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Motor_Tapes_Shore__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Motor_Tapes_Shore__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Motor_Tapes_Shore__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Motor_Tapes_Shore__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Motor_Tapes_Shore__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Motor_Tapes_Shore__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Motor_Tapes_Shore__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Motor_Tapes_Shore__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Motor_Tapes_Shore__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Motor_Tapes_Shore__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Secretariat - Borderline</th>
+<td><audio controls preload="none"><source src="audio/exp1__Secretariat_Borderline__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Secretariat_Borderline__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Secretariat_Borderline__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Secretariat_Borderline__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Secretariat_Borderline__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Secretariat_Borderline__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Secretariat_Borderline__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Secretariat_Borderline__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Secretariat_Borderline__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Secretariat_Borderline__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Secretariat_Borderline__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Secretariat_Borderline__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Secretariat_Borderline__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Secretariat_Borderline__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Secretariat_Borderline__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Secretariat_Borderline__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Signe Jakobsen - What Have You Done To Me</th>
+<td><audio controls preload="none"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Signe_Jakobsen_What_Have_You_Done_To_Me__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>The Easton Ellises (Baumi) - SDRNR</th>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Baumi_SDRNR__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>The Easton Ellises - Falcon 69</th>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Easton_Ellises_Falcon_69__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>The Mountaineering Club - Mallory</th>
+<td><audio controls preload="none"><source src="audio/exp1__The_Mountaineering_Club_Mallory__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Mountaineering_Club_Mallory__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Mountaineering_Club_Mallory__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Mountaineering_Club_Mallory__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Mountaineering_Club_Mallory__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Mountaineering_Club_Mallory__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Mountaineering_Club_Mallory__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Mountaineering_Club_Mallory__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Mountaineering_Club_Mallory__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Mountaineering_Club_Mallory__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Mountaineering_Club_Mallory__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Mountaineering_Club_Mallory__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Mountaineering_Club_Mallory__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Mountaineering_Club_Mallory__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__The_Mountaineering_Club_Mallory__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__The_Mountaineering_Club_Mallory__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Timboz - Pony</th>
+<td><audio controls preload="none"><source src="audio/exp1__Timboz_Pony__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Timboz_Pony__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Timboz_Pony__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Timboz_Pony__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Timboz_Pony__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Timboz_Pony__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Timboz_Pony__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Timboz_Pony__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Timboz_Pony__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Timboz_Pony__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Timboz_Pony__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Timboz_Pony__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Timboz_Pony__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Timboz_Pony__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Timboz_Pony__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Timboz_Pony__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Triviul feat. The Fiend - Widow</th>
+<td><audio controls preload="none"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__random_dry.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__random_dry.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__fxnorm.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__fxnorm.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__megami.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__megami.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__pq_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__pq_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__sb_only.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__sb_only.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__mean_reward.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__mean_reward.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__proposed.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__proposed.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp1__Triviul_feat_The_Fiend_Widow__professional.m4a" type="audio/mp4"></audio></td>
+</tr>
+</tbody></table></div>
+
+<h2>Experiment 2 &mdash; Search-length ladder (reward hacking made audible)</h2>
+<p class="note">The same song mixed with the PQ-only reward at increasing
+search lengths. The quality model scores the 4000-iteration render
+highest, yet listeners rated it below the unbalanced start
+(paper, Table&nbsp;4). Longer search is not better &mdash; listen to the
+ladder left to right.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Song</th>
+<th>0 (start)</th>
+<th>28</th>
+<th>100</th>
+<th>1000</th>
+<th>4000</th>
+<th>Professional mix</th>
+<th>Degraded anchor</th>
+</tr></thead><tbody>
+<tr><th>Ben Carrigan - We&#x27;ll Talk About It All Tonight</th>
+<td><audio controls preload="none"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k0.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k0.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k28.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k28.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k100.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k100.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k1000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k1000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k4000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__rand_k4000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__professional.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__anchor_lp35.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Ben_Carrigan_We_ll_Talk_About_It_All_Tonight__anchor_lp35.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Cristina Vane - So Easy</th>
+<td><audio controls preload="none"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k0.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k0.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k28.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k28.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k100.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k100.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k1000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k1000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k4000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Cristina_Vane_So_Easy__rand_k4000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Cristina_Vane_So_Easy__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Cristina_Vane_So_Easy__professional.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Cristina_Vane_So_Easy__anchor_lp35.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Cristina_Vane_So_Easy__anchor_lp35.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Hollow Ground - Ill Fate</th>
+<td><audio controls preload="none"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k0.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k0.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k28.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k28.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k100.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k100.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k1000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k1000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k4000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Hollow_Ground_Ill_Fate__rand_k4000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Hollow_Ground_Ill_Fate__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Hollow_Ground_Ill_Fate__professional.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Hollow_Ground_Ill_Fate__anchor_lp35.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Hollow_Ground_Ill_Fate__anchor_lp35.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Little Chicago&#x27;s Finest - My Own</th>
+<td><audio controls preload="none"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k0.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k0.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k28.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k28.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k100.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k100.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k1000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k1000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k4000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__rand_k4000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__professional.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__anchor_lp35.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Little_Chicago_s_Finest_My_Own__anchor_lp35.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>The Easton Ellises (Baumi) - SDRNR</th>
+<td><audio controls preload="none"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k0.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k0.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k28.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k28.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k100.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k100.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k1000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k1000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k4000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__rand_k4000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__professional.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__anchor_lp35.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__The_Easton_Ellises_Baumi_SDRNR__anchor_lp35.m4a" type="audio/mp4"></audio></td>
+</tr>
+<tr><th>Timboz - Pony</th>
+<td><audio controls preload="none"><source src="audio/exp2__Timboz_Pony__rand_k0.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Timboz_Pony__rand_k0.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Timboz_Pony__rand_k28.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Timboz_Pony__rand_k28.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Timboz_Pony__rand_k100.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Timboz_Pony__rand_k100.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Timboz_Pony__rand_k1000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Timboz_Pony__rand_k1000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Timboz_Pony__rand_k4000.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Timboz_Pony__rand_k4000.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Timboz_Pony__professional.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Timboz_Pony__professional.m4a" type="audio/mp4"></audio></td>
+<td><audio controls preload="none"><source src="audio/exp2__Timboz_Pony__anchor_lp35.opus" type="audio/ogg; codecs=opus"><source src="audio/exp2__Timboz_Pony__anchor_lp35.m4a" type="audio/mp4"></audio></td>
+</tr>
+</tbody></table></div>
+
+<footer>
+Source material: MUSDB18 corpus (research use). Excerpts are shown for
+research demonstration only. All clips are 48&nbsp;kHz Opus with an AAC
+fallback; if playback fails, try a current version of Chrome or Firefox.
+</footer>
+</main>
+<script>
+// 同時再生を防ぐ: どれかを再生したら他を止める
+document.addEventListener('play', function(e) {
+  document.querySelectorAll('audio').forEach(function(a) {
+    if (a !== e.target) a.pause();
+  });
+}, true);
+</script>
+</body>
+</html>
